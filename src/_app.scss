@@ -1,0 +1,25 @@
+@import '@blibli/blue-dls-utils/dist/scss/responsive-mixins-helper';
+
+body {
+  --background-color: #{$blu-color-neutral-background-default};
+  --text-color: #{$blu-color-neutral-text-high};
+  --font-family: #{$blu-font-family-body-text};
+
+  // Used for improvement
+  // --icon-color: #{$blu-color-neutral-icon-default};
+  // --table-header-background-color: #{$blu-color-neutral-background-med};
+  // --table-background-color-highlighted: #{$blu-color-neutral-background-low};
+  // --default-text-color: #{$blu-color-neutral-text-high};
+  // --cover-color: #{$blu-color-info-background-med};
+
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}

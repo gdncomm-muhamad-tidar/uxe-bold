@@ -1,3 +1,12 @@
+<script setup>
+const scrollToSection = (sectionId) => {
+  const element = document.querySelector(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+</script>
+
 <template>
   <nav class="nav-menu">
     <div class="nav-brand">
@@ -5,10 +14,10 @@
       <span class="brand-name">UXE Bold</span>
     </div>
     <div class="nav-links">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#features" class="nav-link">Features</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a @click.prevent="scrollToSection('#home')" href="#home" class="nav-link">Home</a>
+      <a @click.prevent="scrollToSection('#features')" href="#features" class="nav-link">Features</a>
+      <a @click.prevent="scrollToSection('#about')" href="#about" class="nav-link">About</a>
+      <a @click.prevent="scrollToSection('#contact')" href="#contact" class="nav-link">Contact</a>
     </div>
   </nav>
 </template>
@@ -21,6 +30,11 @@
   padding: 1rem 2rem;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .nav-brand {

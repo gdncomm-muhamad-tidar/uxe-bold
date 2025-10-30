@@ -1,4 +1,9 @@
-@import './base.css';
+@use 'variables';
+@use 'base';
+
+html {
+  scroll-behavior: smooth;
+}
 
 #app {
   margin: 0 auto;
